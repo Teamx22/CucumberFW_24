@@ -1,4 +1,3 @@
-
 package base;
 
 import org.openqa.selenium.WebDriver;
@@ -15,7 +14,7 @@ public class config {
     public static WebDriver setupBrowser (String driverType){
         if(driverType.equalsIgnoreCase("ch")){
             driver = new ChromeDriver();
-        } else if (driverType.equalsIgnoreCase("firefox")){
+        } else if (driverType.equalsIgnoreCase("ff")){
             driver = new FirefoxDriver();
         } else if (driverType.equalsIgnoreCase("safari")){
             SafariOptions options = new SafariOptions();
