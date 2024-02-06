@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.talentTEK</groupId>
-  <artifactId>CucumberFW_ONSITE_DEC23</artifactId>
+  <artifactId>CucumberFW_24</artifactId>
   <version>1.0-SNAPSHOT</version>
 
   <build>
@@ -39,7 +39,7 @@
               <goal>generate</goal>
             </goals>
             <configuration>
-              <projectName>CucumberFW_ONSITE_DEC23</projectName>
+              <projectName>CucumberFW_24</projectName>
               <outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
             </configuration>
           </execution>
@@ -51,7 +51,7 @@
 
   <packaging>jar</packaging>
 
-  <name>CucumberFW_ONSITE_DEC23</name>
+  <name>CucumberFW_24</name>
   <url>http://maven.apache.org</url>
 
   <properties>
