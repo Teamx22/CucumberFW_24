@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: TestRunner
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.913 s <<< FAILURE! - in TestRunner
+TestRunner.runScenario["Student logs in with valid credentials", "TalentTEK Login Feature"](1)  Time elapsed: 0.061 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "driverType" is null
+	at base.config.setupBrowser(config.java:15)
+	at stepDef.Hook.beforeEachTest(Hook.java:18)
+

@@ -3,39 +3,43 @@ package stepDef;
 import base.config;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import org.openqa.selenium.WebDriver;
+import org.testng.util.Strings;
 
 
-public class Hook extends config{
-    public static String baseURL;
+public class Hook extends config {
+    public static String url;
 
     public static String envType =System.getProperty("env");
-    public static String browserType=System.getProperty("browser");
+    public static String browserType =System.getProperty("browser");
 
     @Before
     public void beforeEachTest(){
-        driver=setupBrowser(browserType);
+        driver =setupBrowser(browserType);
 
-        switch(envType){
-            case"qa":
-                baseURL=https;//qa.taltektc.com;
-                break;
-            case"stage":
-                baseURL =https;//stage.taltektc.com;
-                break;
-            case "prod":
-                baseURL=https;//prod.taltektc.com;
-
+        if(Strings.isNullOrEmpty(envType)){
+            envType ="qa";
         }
-        driver.get(baseURL);
+        if (Strings.isNullOrEmpty(browserType)){
+            browserType ="ch";
+        }
+        if (envType == "qa") {
+            url = "https://qa.taltektc.com";
+        } else if (envType == "stage") {
+            url = "https://qa.taltektc.com";
 
+
+            url = "https://qa.taltektc.com";
+        } else if (envType == "prod") {
+            url = "https://qa.taltektc.com";
+        }
+        driver.get(url);
 
         //start db connection
         //setup url=?
-        // QA=QA.talentek.com
-        //stage=stage..talentek.com
-        //prod=prod.talentek.com
-
-
+        // QA=QA.taltektc.com
+        //stage=stage..taltektc.com
+        //prod=prod.taltektc.com
     }
 
     @After
