@@ -1,5 +1,4 @@
 package base;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -7,11 +6,9 @@ import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.safari.SafariOptions;
 
 import java.time.Duration;
-
 public class config {
     public static WebDriver driver;
-
-    public static WebDriver setupBrowser (String driverType){
+    public static WebDriver setupBrowser ( String driverType){
         if(driverType.equalsIgnoreCase("ch")){
             driver = new ChromeDriver();
         } else if (driverType.equalsIgnoreCase("ff")){
