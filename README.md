@@ -16,3 +16,8 @@
 -TODO-(RIPON)
 -A/C-Acceptance criteria
 -MR-Merge request/PR-Pull request 
+
+# How to run the test?
+
+- mvn verify -Denv=stage -Dbrowser=ch -Dcucumber.filter.tags=@login
+- mvn verify (to run everything)
