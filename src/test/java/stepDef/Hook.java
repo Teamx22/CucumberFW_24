@@ -23,9 +23,13 @@ public class Hook extends config{
                 switch (envType) {
                     case "qa":
                         url = "https://qa.taltektc.com";
+                        STUDENT_EMAIL = "qa.env@gamil.com";
+                        STUDENT_PASSWORD = "123456";
                         break;
                     case "stage":
                         url = "https://stage.taltektc.com";
+                        STUDENT_EMAIL = "stage.evn@gmail.com";
+                        STUDENT_PASSWORD = "123456";
                         break;
 
                     case "prod":
@@ -35,12 +39,13 @@ public class Hook extends config{
         }
         @After
     public void afterEachTest(){
+        driver.quit();
 
         }
-                    //close browser
-                    //quit browser
-                    //take screenshot if test steps or case fail
-                    //close db connection
+        //close browser
+        //quit browser
+        //take screenshot if test steps or case fail
+        // close db connection
 
                 }
 

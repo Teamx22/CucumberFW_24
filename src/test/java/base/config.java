@@ -6,7 +6,7 @@ import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.safari.SafariOptions;
 
 import java.time.Duration;
-public class config {
+public class config extends testData{
     public static WebDriver driver;
     public static WebDriver setupBrowser ( String driverType){
         if(driverType.equalsIgnoreCase("ch")){
