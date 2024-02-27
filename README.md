@@ -18,8 +18,9 @@
 - MR-Merge request/PR-Pull request 
 
 # How to run the test?
-- mvn verify
+
 - mvn verify -Denv=stage -Dbrowser=ch -Dcucumber.filter.tags=@login
 - mvn verify -Denv=qa -Dbrowser=ch
 - mvn verify (to run everything)
+- mvn verify -Denv=stage -Dbrowser=ch -Dcucumber.filter.tags=@regression
 

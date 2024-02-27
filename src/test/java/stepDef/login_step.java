@@ -34,4 +34,32 @@ public class login_step extends config {
         String developerCodeExp = driver.findElement(By.xpath("//*[@id='wrap']//h2")).getText();
         Assert.assertEquals(businessAct,developerCodeExp);
     }
+
+    @And("student enter their invalid password")
+    public void studentEnterTheirInvalidPassword() {
+        
+    }
+
+    @And("student enter their invalid email address")
+    public void studentEnterTheirInvalidEmailAddress() {
+        
+    }
+
+    @Then("student should get an error message for entering invalid credentials")
+    public void studentShouldGetAnErrorMessageForEnteringInvalidCredentials() throws InterruptedException {
+        String expText ="Invalid email address";
+        System.out.println ("My Exp is :====>" + expText);
+        Thread.sleep(1000);   // Selenium move to fast
+        String actText = driver.findElement(By.xpath("//*[@id='error-msg']")).getText();
+        System.out.println ("My Developer had is :====>" + actText);
+        Assert.assertEquals(expText,actText);
+
+    }
+
+    @Then("student should get an error message for entering invalid password")
+    public void studentShouldGetAnErrorMessageForEnteringInvalidPassword() {
+        String expText ="Incorrect email or password";
+        String actText = driver.findElement(By.xpath("//*[@id='error-msg']")).getText();
+        Assert.assertEquals(expText,actText);
+    }
 }
